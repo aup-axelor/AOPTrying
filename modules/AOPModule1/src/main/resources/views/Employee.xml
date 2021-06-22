@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+    
+    <grid title="Contact" name="employee_all" model="com.AOP.module1.db.Employee">
+        <field name="firstName"></field>
+        <field name="lastName"></field>
+        <field name="number"></field>
+        <field name="alive"></field>
+        <field name="dateOfBirth"></field>
+        <field name="company"></field>
+    </grid>
+    <form title="Contact" name="employee_all" model="com.AOP.module1.db.Employee">
+        <panel>
+            <field name="firstName"></field>
+            <field name="lastName"></field>
+            <field name="number"></field>
+            <field name="alive"></field>
+            <field name="dateOfBirth"></field>
+            <field name="company"></field>
+        </panel>
+    </form>
+    
+    
+    
+</object-views>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <menuitem name="menu-AOP-main"
+              title="Main Menu" />
+
+    <menuitem name="menu-AOP-modeule1"
+              parent="menu-AOP-main"
+              title="Module1"/>
+
+    <menuitem name="module1-company-all"
+              parent="menu-AOP-modeule1"
+              title="Company"
+                action="company-all"/>
+
+    <menuitem name="module1-employee-all"
+              parent="menu-AOP-modeule1"
+              title="Employee"
+            action="employee-all"/>
+
+
+    <action-view name="company-all"
+                 title="module1-company-all"
+                 model="com.AOP.module1.db.Company">
+        <view type="grid" name="company_all"/>
+        <view type="form" name="company_all"/>
+    </action-view>
+    <action-view name="employee-all"
+                 title="module1-employee-all"
+                 model="com.AOP.module1.db.Employee">
+        <view type="grid" name="employee_all"/>
+        <view type="form" name="employee_all"/>
+    </action-view>
+
+</object-views>

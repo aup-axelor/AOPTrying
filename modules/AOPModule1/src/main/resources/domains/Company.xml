@@ -1,0 +1,14 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="company" package="com.AOP.module1.db"/>
+
+    <entity name="Company">
+        <string name="name" required="true"></string>
+        <integer name="years" required="true"></integer>
+        <boolean name="isValid" column="working"></boolean>
+    </entity>
+
+</domain-models>

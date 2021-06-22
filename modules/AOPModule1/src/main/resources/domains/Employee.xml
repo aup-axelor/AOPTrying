@@ -1,0 +1,29 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="employee" package="com.AOP.module1.db"/>
+
+    <entity name="Employee">
+        <string name="firstName" required="true"></string>
+        <string name="lastName" required="true"></string>
+        <string name="name" readonly="true">
+            <![CDATA[
+                if(firstName==null)
+                    return null;
+                return firstName+" "+lastName;
+            ]]>
+        </string>
+        <long name="number" required="false" column="phoneNumber"></long>
+        <boolean name="alive" default="false"></boolean>
+        <date name="dateOfBirth"></date>
+        <many-to-one name="company" ref="Company"></many-to-one>
+
+
+        <finder-method name="findByName" using="name" />
+        <finder-method name="findByNumber" using="number" />
+
+    </entity>
+
+</domain-models>
