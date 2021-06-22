@@ -21,18 +21,32 @@
               title="Employee"
             action="employee-all"/>
 
+    <menuitem name="module1-project-all"
+              parent="menu-AOP-modeule1"
+              title="Project"
+              action="project-all"/>
 
+
+<!-- place to add actions for different modules-->
     <action-view name="company-all"
                  title="module1-company-all"
                  model="com.AOP.module1.db.Company">
         <view type="grid" name="company_all"/>
         <view type="form" name="company_all"/>
     </action-view>
+
     <action-view name="employee-all"
                  title="module1-employee-all"
                  model="com.AOP.module1.db.Employee">
         <view type="grid" name="employee_all"/>
         <view type="form" name="employee_all"/>
+    </action-view>
+
+    <action-view name="project-all"
+                 title="module1-project-all"
+                 model="com.AOP.module1.db.Project">
+        <view type="grid" name="project_all"/>
+        <view type="form" name="project_all"/>
     </action-view>
 
 </object-views>

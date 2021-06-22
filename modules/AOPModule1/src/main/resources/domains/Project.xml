@@ -3,14 +3,13 @@
                xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
   http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
 
-    <module name="company" package="com.AOP.module1.db"/>
+    <module name="project" package="com.AOP.module1.db"/>
 
-    <entity name="Company">
+    <entity name="Project">
         <string name="name" required="true"></string>
-        <integer name="years" required="true"></integer>
-        <boolean name="isValid" column="working"></boolean>
-        <many-to-one name="parent" ref="Company"/>
-        <one-to-many name="projects" ref="Project"></one-to-many>
+        <integer name="projectNumber" required="true"></integer>
+
+        <many-to-many name="teamMembers" ref="Employee"></many-to-many>
     </entity>
 
 </domain-models>

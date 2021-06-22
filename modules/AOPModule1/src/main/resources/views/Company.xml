@@ -8,13 +8,19 @@
         <field name="name"></field>
         <field name="year"></field>
         <field name="isValid"></field>
+        <field name="parent"></field>
     </grid>
     <form title="Company" name="company_all" model="com.AOP.module1.db.Employee">
         <panel>
             <field name="name"></field>
             <field name="year"></field>
             <field name="isValid"></field>
+            <field name="parent" domain="self.code != :code"/>
         </panel>
+        <panel-related field="projects">
+            <field name="name"></field>
+            <field name="projectNumber"></field>
+        </panel-related>
     </form>
 
 
