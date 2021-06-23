@@ -6,11 +6,11 @@
     <module name="company" package="com.AOP.module1.db"/>
 
     <entity name="Company">
-        <string name="name" required="true"></string>
-        <integer name="years" required="true"></integer>
-        <boolean name="isValid" column="working"></boolean>
-        <many-to-one name="parent" ref="Company"/>
-        <one-to-many name="projects" ref="Project"></one-to-many>
+        <string name="name" required="true" title="Name"></string>
+        <integer name="years" required="true" title="Establish Year"></integer>
+        <boolean name="isValid" column="working" title="Still Working"></boolean>
+        <many-to-one name="parent" ref="Company" title="Parent"/>
+        <one-to-many name="projects" ref="Project" title="Projects"></one-to-many>
     </entity>
 
 </domain-models>

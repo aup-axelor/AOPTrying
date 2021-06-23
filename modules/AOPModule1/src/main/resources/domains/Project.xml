@@ -6,10 +6,10 @@
     <module name="project" package="com.AOP.module1.db"/>
 
     <entity name="Project">
-        <string name="name" required="true"></string>
-        <integer name="projectNumber" required="true"></integer>
+        <string name="name" required="true" title="Name"></string>
+        <integer name="projectNumber" required="true" title="Project Number"></integer>
 
-        <many-to-many name="teamMembers" ref="Employee"></many-to-many>
+        <many-to-many name="teamMembers" ref="Employee" title="Team Members"></many-to-many>
     </entity>
 
 </domain-models>
