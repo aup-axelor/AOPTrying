@@ -5,12 +5,14 @@
 
     <module name="company" package="com.AOP.module1.db"/>
 
-    <entity name="Company">
+    <entity name="Company" repository="abstract">
         <string name="name" required="true" title="Name"></string>
         <integer name="years" required="true" title="Establish Year"></integer>
         <boolean name="isValid" column="working" title="Still Working"></boolean>
         <many-to-one name="parent" ref="Company" title="Parent"/>
         <one-to-many name="projects" ref="Project" title="Projects"></one-to-many>
+        <unique-constraint columns="name"></unique-constraint>
+        <finder-method name="findByParent" using="parent" filter="self.parent!=:parent"></finder-method>
     </entity>
 
 </domain-models>
