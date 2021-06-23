@@ -16,6 +16,7 @@
             ]]>
         </string>
         <long name="number" required="false" column="phoneNumber" title="Phone Number"></long>
+        <string name="password" encrypted="true" required="true" title="Password"></string>
         <boolean name="alive" default="false" title="Is Alive"></boolean>
         <date name="dateOfBirth" title="Date of Birth"></date>
         <many-to-one name="company" ref="Company" title="Company"></many-to-one>

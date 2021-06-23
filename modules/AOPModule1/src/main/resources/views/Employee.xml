@@ -8,6 +8,7 @@
         <field name="firstName"></field>
         <field name="lastName"></field>
         <field name="number"></field>
+        <field name="password"></field>
         <field name="alive"></field>
         <field name="dateOfBirth"></field>
         <field name="company"></field>
