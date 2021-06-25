@@ -34,13 +34,17 @@
                     <field name="lastName" title="Last Name"/>
                 </editor>
             </field>
-
+            <field name="aadharNo" title="Aadhar Number" colSpan="12"/>
+            <field name="phoneNo" title="Phone Number"/>
+            <field name="isCaseRelated" title="Related to case"/>
+            <field name="dateOfBirth" title="DOB"/>
             <field name="email" title="E-Mail">
                 <viewer><![CDATA[
                     <a href="mailto:{{record.email}}">{{record.email}}</a>]]>
                 </viewer>
             </field>
         </panel>
+
         <panel-tabs>
             <panel title="Job">
                 <field name="companyName" title="Company Name"/>
@@ -48,6 +52,7 @@
                 <field name="position" title="Position"/>
                 <field name="dateOfJoin" title="Date of Joining"/>
             </panel>
+            <panel-include view="address-form-all"/>
         </panel-tabs>
     </form>
     

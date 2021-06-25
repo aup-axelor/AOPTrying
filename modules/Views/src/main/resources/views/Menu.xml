@@ -13,13 +13,19 @@
     <menuitem name="menu-judiciary-basic"
               parent="main-views"
               title="Basic"/>
+    <menuitem name="menu-judiciary-person"
+              parent="main-views"
+              title="Person"
+              action="person-all"
+    />
 
 <!--    Inside Basic Menu   -->
     <menuitem name="country-all" title="Country" parent="menu-judiciary-basic" action="country-all"/>
     <menuitem name="state-all" title="State" parent="menu-judiciary-basic" action="state-all"/>
     <menuitem name="address-all" title="Address" parent="menu-judiciary-basic" action="address-all"/>
+    <menuitem name="job-all" title="Job" parent="menu-judiciary-basic" action="job-all"/>
 
-<!--    Actions     -->
+    <!--    Actions     -->
 
 <!--    Country Action  -->
     <action-view name="country-all" title="Country" model="com.judiciary.basic.db.Country">
@@ -35,5 +41,15 @@
     <action-view name="address-all" title="Address" model="com.judiciary.basic.db.Address">
         <view type="grid" name="address-grid-all"/>
         <view type="form" name="address-form-all"/>
+    </action-view>
+<!--    Job Action-->
+    <action-view name="job-all" title="Job" model="com.judiciary.basic.db.Job">
+        <view type="grid" name="job-grid-all"/>
+        <view type="form" name="job-form-all"/>
+    </action-view>
+<!--    Person Action-->
+    <action-view name="person-all" title="Job" model="com.judiciary.db.Person">
+        <view type="grid" name="person-grid-all"/>
+        <view type="form" name="person-form-all"/>
     </action-view>
 </object-views>

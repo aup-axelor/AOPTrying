@@ -14,9 +14,9 @@
 
     <form title="Address" name="address-form-all" model="com.judiciary.basic.db.Address">
         <panel title="Address Overview">
-            <field name="street" title="Street" colSpan="6" />
+            <field name="street" title="Street" colSpan="6"/>
             <field name="city" title="City" colSpan="6"/>
-            <field name="state" title="State" colSpan="4" canNew="true" canRemove="false"/>
+            <field name="state" title="State" colSpan="4" canNew="true" canRemove="false" />
             <field name="country" title="Country" colSpan="4" canNew="true" canRemove="true"/>
             <field name="pin" title="PIN" colSpan="4"/>
         </panel>
