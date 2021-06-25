@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <grid title="Job" name="job-grid-all" model="com.judiciary.basic.db.Job">
+        <field name="companyName" title="Company Name"/>
+        <field name="department" title="Department"/>
+        <field name="position" title="Position"/>
+        <field name="dateOfJoin" title="Date of Joining"/>
+    </grid>
+
+    <form title="Job" name="job-form-all" model="com.judiciary.basic.db.Job">
+        <panel title="Job">
+            <field name="companyName" title="Company Name"/>
+            <field name="department" title="Department"/>
+            <field name="position" title="Position"/>
+            <field name="dateOfJoin" title="Date of Joining"/>
+        </panel>
+    </form>
+
+</object-views>

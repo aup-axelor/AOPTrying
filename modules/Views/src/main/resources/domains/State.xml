@@ -1,0 +1,11 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="state" package="com.judiciary.basic.db"/>
+    <entity name="State">
+        <string name="name" title="State" required="true" />
+        <many-to-one name="country" ref="Country" title="Country"/>
+    </entity>
+</domain-models>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+
+<!--    Main Menu   -->
+    <menuitem name="main-views"
+              title="Views" />
+
+<!--    Second Level    -->
+    <menuitem name="menu-judiciary-basic"
+              parent="main-views"
+              title="Basic"/>
+
+<!--    Inside Basic Menu   -->
+    <menuitem name="country-all" title="Country" parent="menu-judiciary-basic" action="country-all"/>
+    <menuitem name="state-all" title="State" parent="menu-judiciary-basic" action="state-all"/>
+    <menuitem name="address-all" title="Address" parent="menu-judiciary-basic" action="address-all"/>
+
+<!--    Actions     -->
+
+<!--    Country Action  -->
+    <action-view name="country-all" title="Country" model="com.judiciary.basic.db.Country">
+        <view type="grid" name="country-grid-all"/>
+        <view type="form" name="country-form-all"/>
+    </action-view>
+<!--    State Action    -->
+    <action-view name="state-all" title="State" model="com.judiciary.basic.db.State">
+        <view type="grid" name="state-grid-all"/>
+        <view type="form" name="state-form-all"/>
+    </action-view>
+<!--    Address Action  -->
+    <action-view name="address-all" title="Address" model="com.judiciary.basic.db.Address">
+        <view type="grid" name="address-grid-all"/>
+        <view type="form" name="address-form-all"/>
+    </action-view>
+</object-views>

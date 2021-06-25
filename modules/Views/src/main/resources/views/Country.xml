@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+    <grid title="Country" name="country-grid-all" model="com.judiciary.basic.db.Country">
+        <field name="name"/>
+        <field name="continent"/>
+        <field name="state"/>
+    </grid>
+
+    <form title="Country" name="country-form-all" model="com.judiciary.basic.db.Country">
+        <panel title="Country Details">
+            <field name="name" title="Country's Name"/>
+            <field name="continent" title="Continent"/>
+        </panel>
+        <panel-related field="states" title="States" canNew="true" canRemove="true" colSpan="12">
+            <field name="state"/>
+            <field name="country"/>
+        </panel-related>
+    </form>
+</object-views>

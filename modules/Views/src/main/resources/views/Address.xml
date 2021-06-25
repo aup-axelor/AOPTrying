@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <grid title="Address" name="address-grid-all" model="com.judiciary.basic.db.Address">
+        <field name="street" title="Street" colSpan="6"/>
+        <field name="city" title="City" colSpan="6"/>
+        <field name="state" title="state" colSpan="4"/>
+        <field name="country" title="Country" colSpan="4"/>
+        <field name="pin" title="PIN" colSpan="4"/>
+    </grid>
+
+    <form title="Address" name="address-form-all" model="com.judiciary.basic.db.Address">
+        <panel title="Address Overview">
+            <field name="street" title="Street" colSpan="6" />
+            <field name="city" title="City" colSpan="6"/>
+            <field name="state" title="State" colSpan="4" canNew="true" canRemove="false"/>
+            <field name="country" title="Country" colSpan="4" canNew="true" canRemove="true"/>
+            <field name="pin" title="PIN" colSpan="4"/>
+        </panel>
+    </form>
+
+</object-views>

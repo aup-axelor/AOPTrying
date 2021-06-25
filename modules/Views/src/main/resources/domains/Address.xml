@@ -1,0 +1,15 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="Address" package="com.judiciary.basic.db"/>
+    <entity name="Address">
+        <string name="street" title="street" />
+        <string name="city" title="City"/>
+        <many-to-one name="state" ref="com.judiciary.basic.db.State" title="State" />
+        <many-to-one name="country" ref="com.judiciary.basic.db.Country" title="Country"/>
+        <integer name="pin" title="PIN"/>
+        <finder-method name="findByPin" using="pin"/>
+    </entity>
+</domain-models>

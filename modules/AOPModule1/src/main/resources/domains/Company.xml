@@ -4,8 +4,8 @@
   http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
 
     <module name="company" package="com.AOP.module1.db"/>
-
-    <entity name="Company" repository="abstract">
+    <sequence name="module1-company-seq1" initial="101" increment="2" padding="5" prefix="CO"/>
+    <entity name="Company" repository="abstract" >
         <string name="name" required="true" title="Name"></string>
         <integer name="years" required="true" title="Establish Year"></integer>
         <boolean name="isValid" column="working" title="Still Working"></boolean>

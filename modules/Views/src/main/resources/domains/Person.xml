@@ -1,0 +1,25 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="Person" package="com.judiciary.db"/>
+    <entity name="Person">
+        <string name="firstName" title="First Name" required="true" hidden="true"/>
+        <string name="lastName" title="Last Name" hidden="true"/>
+        <string name="name" title="Name" transient="true">
+            <![CDATA[
+                if(firstName==null)
+                    return null;
+                return firstName+" "+lastName;
+            ]]>
+        </string>
+        <many-to-one name="address" ref="Address" title="Address"/>
+        <long name="aadharNo" title="Aadhar Number" hashKey="true"/>
+        <long name="phoneNo" title="Phone Number"/>
+        <boolean name="isCaseRelated" title="Related to Case" required="true"/>
+        <date name="dateOfBirth" title="DOB"/>
+        <string name="email" title="E-Mail" />
+        <one-to-one name="job" ref="Job" title="Job" />
+    </entity>
+</domain-models>
