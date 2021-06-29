@@ -5,15 +5,15 @@
 
     <module name="person" package="com.judiciary.db"/>
     <entity name="Person">
-        <string name="firstName" title="First Name" required="true" hidden="true"/>
-        <string name="lastName" title="Last Name" hidden="true"/>
-        <string name="name" title="Name">
-            <![CDATA[
-                if(firstName==null)
-                    return null;
-                return firstName+" "+lastName;
-            ]]>
-        </string>
+        <string name="firstName" title="First Name" required="true"/>
+        <string name="lastName" title="Last Name"/>
+        <string name="name" title="Name"/>
+<!--            <![CDATA[-->
+<!--                if(firstName==null)-->
+<!--                    return null;-->
+<!--                return firstName+" "+lastName;-->
+<!--            ]]>-->
+<!--        </string>-->
         <many-to-one name="address" ref="com.judiciary.basic.db.Address" title="Address"/>
         <long name="aadharNo" title="Aadhar Number" hashKey="true"/>
         <long name="phoneNo" title="Phone Number"/>

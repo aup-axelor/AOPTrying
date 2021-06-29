@@ -48,7 +48,7 @@
         <view type="form" name="job-form-all"/>
     </action-view>
 <!--    Person Action-->
-    <action-view name="person-all" title="Job" model="com.judiciary.db.Person">
+    <action-view name="person-all" title="Person" model="com.judiciary.db.Person">
         <view type="grid" name="person-grid-all"/>
         <view type="form" name="person-form-all"/>
     </action-view>

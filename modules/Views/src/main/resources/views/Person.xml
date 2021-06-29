@@ -3,8 +3,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views
   http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
-    <grid title="Person" name="person-grid-all" model="com.judiciary.db.Person">
-
+    <grid name="person-grid-all" title="Person" model="com.judiciary.db.Person" edit-icon="true">
         <toolbar>
             <button name="toolbarBtn" title="Click"/>
         </toolbar>
@@ -14,20 +13,16 @@
                 <item title="Action 2" action=""/>
             </menu>
         </menubar>
-
-
-        <field name="name" title="Name">
-        <hilite if="$contains(name,'Anurag')" background="success"/>
-        </field>
-        <field name="address" title="Address"/>
+        <hilite if="$contains(firstName,'Anurag')" background="warning"/>
+        <field name="name" title="Name"/>
         <field name="aadharNo" title="Aadhar Number"/>
-        <button name="useless" title="Im am Here" />
-
-
+        <field name="phoneNo" title="Phone Number"/>
+        <field name="isCaseRelated" title="Related to case"/>
+        <field name="dateOfBirth" title="DOB"/>
     </grid>
 
-    <form title="Person" name="person-form-all" model="com.judiciary.db.Person">
-        <panel title="Person Overview" name="person-all-panel">
+    <form name="person-form-all" title="Person" model="com.judiciary.db.Person">
+        <panel name="person-all-panel" title="Person Overview">
             <field name="name" title="Name">
                 <editor>
                     <field name="firstName" title="First Name"/>
@@ -39,22 +34,23 @@
             <field name="isCaseRelated" title="Related to case"/>
             <field name="dateOfBirth" title="DOB"/>
             <field name="email" title="E-Mail">
-                <viewer><![CDATA[
-                    <a href="mailto:{{record.email}}">{{record.email}}</a>]]>
+                <viewer>
+                    <![CDATA[<a href="mailto:{{record.email}}">{{record.email}}</a>]]>
                 </viewer>
             </field>
         </panel>
-
+        <panel title="Job" sidebar="true">
+            <field name="companyName" title="Company Name"/>
+            <field name="department" title="Department"/>
+            <field name="position" title="Position"/>
+            <field name="dateOfJoin" title="Date of Joining"/>
+        </panel>
         <panel-tabs>
-            <panel title="Job">
-                <field name="companyName" title="Company Name"/>
-                <field name="department" title="Department"/>
-                <field name="position" title="Position"/>
-                <field name="dateOfJoin" title="Date of Joining"/>
-            </panel>
+            <panel-include view="job-form-all"/>
             <panel-include view="address-form-all"/>
         </panel-tabs>
     </form>
+
     
     
 </object-views>
