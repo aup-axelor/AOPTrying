@@ -8,7 +8,8 @@
     <entity name="Project">
         <string name="name" required="true" title="Name"></string>
         <integer name="projectNumber" required="true" title="Project Number"></integer>
-
+        <datetime name="startDate" title="Starting Date"/>
+        <datetime name="endDate" title="Ending Date"/>
         <many-to-many name="teamMembers" ref="Employee" title="Team Members"></many-to-many>
     </entity>
 

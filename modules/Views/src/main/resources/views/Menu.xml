@@ -39,6 +39,7 @@
     </action-view>
 <!--    Address Action  -->
     <action-view name="address-all" title="Address" model="com.judiciary.basic.db.Address">
+        <view type="cards" name="address-card-all"/>
         <view type="grid" name="address-grid-all"/>
         <view type="form" name="address-form-all"/>
     </action-view>

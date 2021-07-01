@@ -45,7 +45,8 @@
     <action-view name="project-all"
                  title="module1-project-all"
                  model="com.AOP.module1.db.Project">
-        <view type="grid" name="project_all"/>
+        <view type="calendar" name="project-calender-all"/>
+<!--        <view type="grid" name="project_all"/>-->
         <view type="form" name="project_all"/>
     </action-view>
 
