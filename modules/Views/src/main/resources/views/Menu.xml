@@ -29,7 +29,8 @@
 
 <!--    Country Action  -->
     <action-view name="country-all" title="Country" model="com.judiciary.basic.db.Country">
-        <view type="grid" name="country-grid-all"/>
+        <view type="tree" name="country-tree-all"/>
+<!--        <view type="grid" name="country-grid-all"/>-->
         <view type="form" name="country-form-all"/>
     </action-view>
 <!--    State Action    -->

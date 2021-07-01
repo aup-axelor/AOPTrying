@@ -1,0 +1,16 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+    <module name="task" package="com.AOP.module1.db"/>
+    <entity name="Task">
+        <string name="name" title="Name"/>
+        <string name="userName" title="User Name"/>
+        <integer name="progress" title="Progress"/>
+        <integer name="priority" title="Priority"/>
+        <datetime name="startDate" title="Start Date"/>
+        <datetime name="endDate" title="Ending Date"/>
+    </entity>
+
+</domain-models>

@@ -19,4 +19,14 @@
             <field name="country"/>
         </panel-related>
     </form>
+
+    <tree title="Country" name="country-tree-all">
+        <column name="name"/>
+        <node model="com.judiciary.basic.db.Country">
+            <field name="name"/>
+        </node>
+        <node model="com.judiciary.basic.db.State" parent="country">
+            <field name="name"/>
+        </node>
+    </tree>
 </object-views>

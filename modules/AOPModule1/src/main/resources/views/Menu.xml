@@ -4,9 +4,23 @@
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views
   http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
 
+    <dashboard title="Dashboard" name="dashboard">
+        <dashlet action=""/>
+    </dashboard>
+
+    <menuitem name="dashboard"
+              title="Dashboard"
+              action="dashboard-main"/>
+
+    <action-view name="dashboard-main" title="Dashboard">
+        <view type="dashboard" name="dashboard"/>
+    </action-view>
+
+
+
     <menuitem name="menu-AOP-main"
               title="Main Menu" />
-
+    
     <menuitem name="menu-AOP-modeule1"
               parent="menu-AOP-main"
               title="Module1"/>
@@ -25,6 +39,10 @@
               parent="menu-AOP-modeule1"
               title="Project"
               action="project-all"/>
+    <menuitem name="module1-task-all"
+              parent="menu-AOP-modeule1"
+              title="Task"
+              action="task-all"/>
 
 
 <!-- place to add actions for different modules-->
@@ -49,5 +67,16 @@
 <!--        <view type="grid" name="project_all"/>-->
         <view type="form" name="project_all"/>
     </action-view>
+
+
+    <action-view name="task-all"
+                 title="Task"
+                 model="com.AOP.module1.db.Task">
+        <view type="kanban" name="task-kanban-all"/>
+<!--        <view type="grid" name="employee_all"/>-->
+        <view type="form" name="task-form-all"/>
+    </action-view>
+
+
 
 </object-views>

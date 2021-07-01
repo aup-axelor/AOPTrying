@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <selection name="states">
+        <option value="todo">TO-DO</option>
+        <option value="workingOn">Working On</option>
+        <option value="complete">Completed</option>
+        <option value="dropped">Dropped</option>
+    </selection>
+    <form title="Task" name="task-form-all" model="com.AOP.module1.db.Task">
+        <field name="name"/>
+        <field name="user"/>
+        <field name="progress"/>
+        <field name="priority"/>
+        <field name="startDate"/>
+        <field name="endDate"/>
+    </form>
+    <kanban title="Task" name="task-kanban-all" model="com.AOP.module1.db.Task"
+            columnBy="states" sequenceBy="priority" limit="10" >
+        <field name="name"/>
+        <field name="user"/>
+        <field name="progress"/>
+        <hilite color="danger" if="progress == 0" />
+        <hilite color="success" if="progress == 100" />
+        <hilite color="info" if="progress >= 50" />
+        <hilite color="warning" if="progress > 0" />
+        <template>
+            hey
+            <![CDATA[
+                <h1>{{name}}</h1>
+                <h2>
+                {{user}}
+                {{progress}}
+                </h2>
+            ]]>
+        </template>
+    </kanban>
+
+
+
+
+</object-views>
