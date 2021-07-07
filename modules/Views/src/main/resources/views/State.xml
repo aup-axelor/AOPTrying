@@ -8,10 +8,13 @@
         <field name="name"/>
         <field name="country"/>
     </grid>
-    <form title="State" name="state-form-all" model="com.judiciary.basic.db.State">
+    <form title="State" name="state-form-all" model="com.judiciary.basic.db.State" onNew="state.onNew" >
         <panel title="State Info">
             <field name="name"/>
             <field name="country"/>
         </panel>
     </form>
+    <action-attrs name="state.onNew">
+        <attribute for="country" name="value" expr="eval: __repo__(Country).all().filter('self.name=?','India').fetchOne()"/>
+    </action-attrs>
 </object-views>

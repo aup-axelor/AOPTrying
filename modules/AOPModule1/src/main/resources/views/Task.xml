@@ -4,22 +4,25 @@
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views
   http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
 
-    <selection name="states">
+    <selection name="state">
         <option value="todo">TO-DO</option>
         <option value="workingOn">Working On</option>
         <option value="complete">Completed</option>
         <option value="dropped">Dropped</option>
     </selection>
     <form title="Task" name="task-form-all" model="com.AOP.module1.db.Task">
+        <panel>
         <field name="name"/>
         <field name="user"/>
+        <field name="status"/>
         <field name="progress"/>
         <field name="priority"/>
         <field name="startDate"/>
         <field name="endDate"/>
+        </panel>
     </form>
     <kanban title="Task" name="task-kanban-all" model="com.AOP.module1.db.Task"
-            columnBy="states" sequenceBy="priority" limit="10" >
+            columnBy="state" sequenceBy="priority" limit="10" >
         <field name="name"/>
         <field name="user"/>
         <field name="progress"/>
@@ -38,6 +41,11 @@
             ]]>
         </template>
     </kanban>
+    <gantt title="Task" name="task-gantt-all" model="com.AOP.module1.db.Task" taskStart="startDate">
+        <field name="name"/>
+        <field name="user"/>
+        <field name="progress"/>
+    </gantt>
 
 
 

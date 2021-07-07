@@ -36,4 +36,5 @@ dependencies {
     // add dependencies
     implementation project(':modules:AOPModule1')
     implementation project(':modules:Views')
+    implementation project(':modules:Actions')
 }

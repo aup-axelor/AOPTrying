@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+    <grid title="Users" name="users-grid-button" model="com.action.db.Users">
+        <toolbar>
+            <button name="change" title="Change" onClick="user.clickInfoScript"/>
+        </toolbar>
+        <field name="name"/>
+        <field name="age"/>
+    </grid>
+    <form title="Users" name="users-form-all" model="com.action.db.Users" onNew="users.onNewSetUser">
+<!--        <toolbar>-->
+<!--            <button name="change" title="Change" onClick="action-user-required"/>-->
+<!--        </toolbar>-->
+        <field name="name"/>
+        <field name="age" onChange=""/>
+    </form>
+    <action-record name="users.onNewSetUser" model="com.action.db.Users">
+        <field name="name" expr="eval:__user__"/>
+    </action-record>
+    <action-attrs name="action-user-required" model="com.action.db.User">
+        <attribute for="name" name="required" expr="true"/>
+    </action-attrs>
+
+    <action-method name="users.clickInfo">
+        <call class="com.action.controllers.UserController" method="test"/>
+    </action-method>
+
+    <action-script name="user.clickInfoScript">
+        <script language="groovy">
+            <![CDATA[
+                  def res=$response
+                  res.setFlash("From script")
+            ]]>
+        </script>
+    </action-script>
+
+
+
+</object-views>

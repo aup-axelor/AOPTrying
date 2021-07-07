@@ -29,7 +29,7 @@
     </form>
     
     <calendar title="Project Calender" name="project-calender-all" model="com.AOP.module1.db.Project"
-              eventStart="startDate" eventStop="endDate" colorBy="name">
+              eventStart="startDate" eventStop="endDate" colorBy="name" eventLength="1">
         <field name="name"/>
     </calendar>
 

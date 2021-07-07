@@ -72,7 +72,8 @@
     <action-view name="task-all"
                  title="Task"
                  model="com.AOP.module1.db.Task">
-        <view type="kanban" name="task-kanban-all"/>
+        <view type="gantt" name="task-gantt-all"/>
+<!--        <view type="kanban" name="task-kanban-all"/>-->
 <!--        <view type="grid" name="employee_all"/>-->
         <view type="form" name="task-form-all"/>
     </action-view>

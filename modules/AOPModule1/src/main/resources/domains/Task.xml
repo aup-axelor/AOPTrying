@@ -11,6 +11,7 @@
         <integer name="priority" title="Priority"/>
         <datetime name="startDate" title="Start Date"/>
         <datetime name="endDate" title="Ending Date"/>
+        <string name="state" selection="state" title="State"/>
     </entity>
 
 </domain-models>

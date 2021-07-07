@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+
+    <!--    Main Menu   -->
+    <menuitem name="main-actions"
+              title="Actions" />
+
+    <menuitem name="users-actions" title="Users" parent="main-actions" action="users-action-record"/>
+    <action-view name="users-action-record" title="Users" model="com.action.db.Users">
+        <view type="grid" name="users-grid-button"/>
+        <view type="form" name="users-form-all"/>
+    </action-view>
+
+</object-views>

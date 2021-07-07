@@ -1,4 +1,6 @@
 rootProject.name = 'AOPTrying'
 include "modules:AOPModule1"
 include 'modules:Views'
+include 'modules:Actions'
+
 
