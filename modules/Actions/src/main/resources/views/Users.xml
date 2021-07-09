@@ -6,7 +6,7 @@
 
     <grid title="Users" name="users-grid-button" model="com.action.db.Users">
         <toolbar>
-            <button name="change" title="Change" onClick="user.clickInfoScript"/>
+            <button name="change" title="Change" onClick="users.clickError"/>
         </toolbar>
         <field name="name"/>
         <field name="age"/>
@@ -37,7 +37,9 @@
             ]]>
         </script>
     </action-script>
-
+    <action-validate name="users.clickError">
+        <error message="Hey im a very bad error please solve me"/>
+    </action-validate>
 
 
 </object-views>
