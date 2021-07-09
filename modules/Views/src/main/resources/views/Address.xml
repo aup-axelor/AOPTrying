@@ -30,11 +30,15 @@
         <field name="pin" title="PIN"/>
         <template>
             <![CDATA[
+                <div class="span4 card-image">
+                <img ng-if="hasImage" ng-src="{{$image(null, 'image')}}">
+                <img ng-if="!hasImage" src="img/user.png">
+                <strong>{{country.name}}</strong>
+              </div>
                 <div class="span8">
                 <strong><h4>{{street}}
                 {{city}}</h4>
-                <h2>{{state.name}}
-                {{country.name}}</h2>
+                <h2>{{state.name}}</h2>
                 {{pin}}</strong>
                 </div>
             ]]>
