@@ -30,13 +30,15 @@
 <!--    Country Action  -->
     <action-view name="country-all" title="Country" model="com.judiciary.basic.db.Country">
 <!--        <view type="tree" name="country-tree-all"/>-->
-        <view type="grid" name="country-grid-all"/>
+<!--        <view type="grid" name="country-grid-all"/>-->
+
         <view type="form" name="country-form-all"/>
     </action-view>
 <!--    State Action    -->
     <action-view name="state-all" title="State" model="com.judiciary.basic.db.State">
-        <view type="grid" name="state-grid-all"/>
+<!--        <view type="grid" name="state-grid-all"/>-->
         <view type="form" name="state-form-all"/>
+        <view type="chart" name="country-chart-all"/>
 <!--        <view-param name="details-view" value="true" />-->
         <domain>self.country=:country</domain>
         <context name="country" expr="India"/>
