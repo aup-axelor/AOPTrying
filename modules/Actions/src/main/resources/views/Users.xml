@@ -13,13 +13,13 @@
     </grid>
     <form title="Users" name="users-form-all" model="com.action.db.Users" onNew="users.onNewSetUser">
         <toolbar>
-            <button name="change" title="Change" onClick="users.checkEmptyName"/>
+            <button name="change" title="Change" onClick="users.random-action-group"/>
         </toolbar>
         <field name="name"/>
         <field name="age" onChange=""/>
     </form>
     <action-record name="users.onNewSetUser" model="com.action.db.Users">
-        <field name="name" expr="eval:__user__"/>
+        <field name="name" expr="eval:__user__.name"/>
     </action-record>
     <action-attrs name="action-user-required" model="com.action.db.User">
         <attribute for="name" name="required" expr="true"/>
@@ -44,6 +44,10 @@
     <action-condition name="users.checkEmptyName">
         <check field="name"/>
     </action-condition>
+    <action-group name="users.random-action-group">
+        <action name="users.clickError"/>
+        <action name="users.checkEmptyName"/>
+    </action-group>
 
 
 </object-views>
