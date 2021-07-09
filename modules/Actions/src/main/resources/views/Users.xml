@@ -12,9 +12,9 @@
         <field name="age"/>
     </grid>
     <form title="Users" name="users-form-all" model="com.action.db.Users" onNew="users.onNewSetUser">
-<!--        <toolbar>-->
-<!--            <button name="change" title="Change" onClick="action-user-required"/>-->
-<!--        </toolbar>-->
+        <toolbar>
+            <button name="change" title="Change" onClick="users.checkEmptyName"/>
+        </toolbar>
         <field name="name"/>
         <field name="age" onChange=""/>
     </form>
@@ -40,6 +40,10 @@
     <action-validate name="users.clickError">
         <error message="Hey im a very bad error please solve me"/>
     </action-validate>
+
+    <action-condition name="users.checkEmptyName">
+        <check field="name"/>
+    </action-condition>
 
 
 </object-views>
