@@ -1,53 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <object-views xmlns="http://axelor.com/xml/ns/object-views"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
   http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
 
-    <grid title="Users" name="users-grid-button" model="com.action.db.Users">
-        <toolbar>
-            <button name="change" title="Change" onClick="users.clickError"/>
-        </toolbar>
-        <field name="name"/>
-        <field name="age"/>
-    </grid>
-    <form title="Users" name="users-form-all" model="com.action.db.Users" onNew="users.onNewSetUser">
-        <toolbar>
-            <button name="change" title="Change" onClick="users.random-action-group"/>
-        </toolbar>
-        <field name="name"/>
-        <field name="age" onChange=""/>
-    </form>
-    <action-record name="users.onNewSetUser" model="com.action.db.Users">
-        <field name="name" expr="eval:__user__.name"/>
-    </action-record>
-    <action-attrs name="action-user-required" model="com.action.db.User">
-        <attribute for="name" name="required" expr="true"/>
-    </action-attrs>
+	<grid title="Users" name="users-grid-button"
+		model="com.action.db.Users">
+		<toolbar>
+			<button name="change" title="Change"
+				onClick="action-user-report" />
+		</toolbar>
+		<field name="name" />
+		<field name="age" />
+	</grid>
+	<form title="Users" name="users-form-all"
+		model="com.action.db.Users" onNew="users.onNewSetUser">
+		<toolbar>
+			<button name="change" title="Change"
+				onClick="users.random-action-group" />
+		</toolbar>
+		<field name="name" />
+		<field name="age" onChange="" />
+	</form>
+	<action-record name="users.onNewSetUser"
+		model="com.action.db.Users">
+		<field name="name" expr="eval:__user__.name" />
+	</action-record>
+	<action-attrs name="action-user-required"
+		model="com.action.db.User">
+		<attribute for="name" name="required" expr="true" />
+	</action-attrs>
 
-    <action-method name="users.clickInfo">
-        <call class="com.action.controllers.UserController" method="test"/>
-    </action-method>
+	<action-method name="users.clickInfo">
+		<call class="com.action.controllers.UserController" method="test" />
+	</action-method>
 
-    <action-script name="user.clickInfoScript">
-        <script language="groovy">
+	<action-script name="user.clickInfoScript">
+		<script language="groovy">
             <![CDATA[
                   def res=$response
                   res.setFlash("From script")
             ]]>
         </script>
-    </action-script>
-    <action-validate name="users.clickError">
-        <error message="Hey im a very bad error please solve me"/>
-    </action-validate>
+	</action-script>
+	<action-validate name="users.clickError">
+		<error message="Hey im a very bad error please solve me" />
+	</action-validate>
 
-    <action-condition name="users.checkEmptyName">
-        <check field="name"/>
-    </action-condition>
-    <action-group name="users.random-action-group">
-        <action name="users.clickError"/>
-        <action name="users.checkEmptyName"/>
-    </action-group>
+	<action-condition name="users.checkEmptyName">
+		<check field="name" />
+	</action-condition>
+	<action-group name="users.random-action-group">
+		<action name="users.clickError" />
+		<action name="users.checkEmptyName" />
+	</action-group>
+	<action-report output="user-${date}"
+		name="action-user-report"
+		design="user_report.rptdesign"
+		format="doc"></action-report>
 
 
 </object-views>

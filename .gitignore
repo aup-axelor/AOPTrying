@@ -3,4 +3,15 @@
 /gradle
 
 /modules/*/build
+/modules/*/bin
 /.idea
+
+/.settings
+.project
+/bin
+.classpath
+/modules/*/.classpath
+/modules/*/.project
+/modules/*/.settings
+/modules/.project
+/modules/.settings
